@@ -855,3 +855,31 @@ button, input, textarea {
     transform: translateY(0);
     transition: opacity .2s, transform .2s
 }
+
+label {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgb(152, 161, 179);
+    margin-bottom: 6px;
+}
+
+input {
+    border-radius: 3px;
+    padding: 11px 16px;
+    width: 100%;
+    display: block;
+    caret-color: rgb(33, 150, 243);
+    background-color: rgb(242, 245, 250);
+    outline: none;
+    border: 0px;
+    color: rgb(38, 43, 51);
+    pointer-events: unset;
+    transition: color 0.1s ease 0s;
+}
+
+.templates-root__input {
+    margin-bottom: 15px;
+}

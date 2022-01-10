@@ -11,9 +11,32 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
+<div class="container container--templates">
+    <div class="templates-root__container">
+        <div class="templates-root__input">
+            <label>
+                <div>First Name</div>
+            </label>
+            <input name="firstName" placeholder="e.g. Teacher">
+        </div>
 
-TEST
+        <div class="templates-root__input">
+            <label>
+                <div>Last Name</div>
+            </label>
+            <input name="lastName">
+        </div>
 
+        <div class="templates-root__input">
+            <label>
+                <div>Email</div>
+            </label>
+            <input name="firstName" placeholder="makepdf@gmail.com">
+        </div>
+
+        <button class="button" type="button" id="submit">Создать PDF шаблон</button>
+    </div>
+</div>
 <body class="white-background-body">
 <script src='node_modules/pdfmake/build/pdfmake.js'></script>
 <script src='node_modules/pdfmake/build/vfs_fonts.js'></script>

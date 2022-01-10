@@ -1,31 +1,26 @@
+const submitBtn = document.getElementById('submit');
+
+const formElements = document.querySelectorAll('.templates-root__input');
+
+submitBtn.addEventListener('click', function () {
+    downloadTest();
+});
+
 const downloadTest = () => {
+
+    let arrElements = [];
+
+    formElements.forEach((item, index) => {
+        arrElements.push(item.children[1].value)
+    });
+
+
     const docDefinition = {
         content: [
-            {
-                layout: 'lightHorizontalLines', // optional
-                table: {
-                    // headers are automatically repeated if the table spans over multiple pages
-                    // you can declare how many rows should be treated as headers
-                    headerRows: 1,
-                    widths: [ '*', 'auto', 100, '*' ],
-
-                    body: [
-                        [ 'First', 'Second', 'Third', 'The last one' ],
-                        [ 'Value 1', 'Value 2wegggggggg' , 'Value 3', 'Value 4' ],
-                        [ { text: 'Bold value', bold: true, color: 'red', background: 'yellow' }, 'Val 2', 'Val 3', 'Val 4' ]
-                    ]
-                }
-            }
+            'First Name', arrElements[0],
+            'Last Name', arrElements[1],
+            'Email', arrElements[2],
         ],
-        styles: {
-            header: {
-                fontSize: 22,
-                bold: true
-            },
-            anotherStyle: {
-                fontSize: 90,
-            }
-        }
     };
     pdfMake.createPdf(docDefinition).download('pdfmake.pdf');
 }
